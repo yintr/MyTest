@@ -24,6 +24,8 @@
 		74555013F175009BAF5981BC /* Pods_MyTest_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D374DDD4873BA2137F008AE /* Pods_MyTest_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9D83E95F4EE1B181EB4E81D1 /* Pods_MyTest_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604077B8D215B16ACB78F8D5 /* Pods_MyTest_Example.framework */; };
+		B574D63923B094E900DB6558 /* MBCatchErrorLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B574D63623B094E900DB6558 /* MBCatchErrorLog.m */; };
+		B574D63A23B094E900DB6558 /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B574D63723B094E900DB6558 /* DeviceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +64,15 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747652BE123186769E3B8BCF /* Pods-MyTest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTest_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MyTest_Tests/Pods-MyTest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A7CE1C304834A2B31BAE8E55 /* MyTest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MyTest.podspec; path = ../MyTest.podspec; sourceTree = "<group>"; };
+		A7CE1C304834A2B31BAE8E55 /* MyTest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MyTest.podspec; path = ../MyTest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5354CCA9D7D0AD67C841712 /* Pods-MyTest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTest_Example.release.xcconfig"; path = "Target Support Files/Pods-MyTest_Example/Pods-MyTest_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B574D63523B094E900DB6558 /* DeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceHelper.h; sourceTree = "<group>"; };
+		B574D63623B094E900DB6558 /* MBCatchErrorLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCatchErrorLog.m; sourceTree = "<group>"; };
+		B574D63723B094E900DB6558 /* DeviceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHelper.m; sourceTree = "<group>"; };
+		B574D63823B094E900DB6558 /* MBCatchErrorLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCatchErrorLog.h; sourceTree = "<group>"; };
 		B6996AA661A2DAE2427C5D32 /* Pods-MyTest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTest_Example.debug.xcconfig"; path = "Target Support Files/Pods-MyTest_Example/Pods-MyTest_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B6DEA9D928A759513BBC4629 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		BD1118C988499060E433D675 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B6DEA9D928A759513BBC4629 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BD1118C988499060E433D675 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,6 @@
 				747652BE123186769E3B8BCF /* Pods-MyTest_Tests.debug.xcconfig */,
 				183E776B41B7F8C3C3180A7C /* Pods-MyTest_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +149,7 @@
 		6003F593195388D20070C39A /* Example for MyTest */ = {
 			isa = PBXGroup;
 			children = (
+				B574D63423B094E900DB6558 /* Classes */,
 				6003F59C195388D20070C39A /* MBAppDelegate.h */,
 				6003F59D195388D20070C39A /* MBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -195,6 +201,17 @@
 				B6DEA9D928A759513BBC4629 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B574D63423B094E900DB6558 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B574D63523B094E900DB6558 /* DeviceHelper.h */,
+				B574D63723B094E900DB6558 /* DeviceHelper.m */,
+				B574D63823B094E900DB6558 /* MBCatchErrorLog.h */,
+				B574D63623B094E900DB6558 /* MBCatchErrorLog.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -366,7 +384,9 @@
 			files = (
 				6003F59E195388D20070C39A /* MBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MBViewController.m in Sources */,
+				B574D63923B094E900DB6558 /* MBCatchErrorLog.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				B574D63A23B094E900DB6558 /* DeviceHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
